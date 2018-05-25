@@ -23,9 +23,16 @@ private struct SchemesOfTheMap {
 
 class ViewController: UIViewController {
 
+    //Map View
     @IBOutlet weak var mapView: NMAMapView!
-    
+    //Location Manager
     let locationManager = CLLocationManager()
+    //Buttons
+    @IBOutlet weak var normalButton: UIButton!
+    @IBOutlet weak var hybridButton: UIButton!
+    @IBOutlet weak var reducedButton: UIButton!
+    @IBOutlet weak var satelliteButton: UIButton!
+    @IBOutlet weak var nightButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +49,8 @@ class ViewController: UIViewController {
 
     /// Functio tha plays with the map settings
     func playingWithTheMap(){
+        //For test define a accessibilityIdentifier
+        self.mapView.accessibilityIdentifier = "mapView"
         //Set the delegate of the map
         self.mapView.delegate = self
         //Set the gestures delegate of the map
@@ -108,6 +117,28 @@ class ViewController: UIViewController {
     ///Function that manipulates the scheme theme of the map
     private func playingWithScheme(schemeToUse scheme: String){
         self.mapView.mapScheme = scheme
+    }
+    
+    //Actions
+    @IBAction func changeSchemeAction(_ sender: UIButton){
+        switch sender.restorationIdentifier {
+        case "normal":
+            self.mapView.mapScheme = SchemesOfTheMap.normalDay
+        case "hybrid":
+            self.mapView.mapScheme = SchemesOfTheMap.hybridDay
+        case "reduced":
+            self.mapView.mapScheme = SchemesOfTheMap.reducedDay
+        case "satellite":
+            self.mapView.mapScheme = SchemesOfTheMap.satelliteDay
+        case "night":
+            self.mapView.mapScheme = SchemesOfTheMap.normalNight
+        default:
+            return
+        }
+    }
+    
+    func makeACountForUnityTest(_ number: Int) -> Int {
+        return 100 - number
     }
 }
 

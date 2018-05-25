@@ -15,8 +15,8 @@
 		C767E81020B83DA500535CED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C767E80F20B83DA500535CED /* Assets.xcassets */; };
 		C767E81320B83DA500535CED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C767E81120B83DA500535CED /* LaunchScreen.storyboard */; };
 		C767E81E20B83DA500535CED /* HereSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C767E81D20B83DA500535CED /* HereSDKTests.swift */; };
-		C767E82920B83DA500535CED /* HereSDKUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C767E82820B83DA500535CED /* HereSDKUITests.swift */; };
 		C767E83820B845EF00535CED /* ViewController+Maps.swift in Sources */ = {isa = PBXBuildFile; fileRef = C767E83720B845EF00535CED /* ViewController+Maps.swift */; };
+		C7E0D39520B87925007B147F /* HereSDKUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E0D39420B87924007B147F /* HereSDKUITests.swift */; };
 		F23EC99612054B5668440776 /* Pods_HereSDKUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B761FB0DF0309D8FFFE1A873 /* Pods_HereSDKUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,9 +55,9 @@
 		C767E81D20B83DA500535CED /* HereSDKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HereSDKTests.swift; sourceTree = "<group>"; };
 		C767E81F20B83DA500535CED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C767E82420B83DA500535CED /* HereSDKUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HereSDKUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C767E82820B83DA500535CED /* HereSDKUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HereSDKUITests.swift; sourceTree = "<group>"; };
 		C767E82A20B83DA600535CED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C767E83720B845EF00535CED /* ViewController+Maps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Maps.swift"; sourceTree = "<group>"; };
+		C7E0D39420B87924007B147F /* HereSDKUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HereSDKUITests.swift; sourceTree = "<group>"; };
 		CACE35FB395F25FD1FBB2353 /* Pods-HereSDKTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HereSDKTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HereSDKTests/Pods-HereSDKTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E1178410C5A3F9DFB6D289E8 /* Pods-HereSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HereSDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HereSDK/Pods-HereSDK.debug.xcconfig"; sourceTree = "<group>"; };
 		F0075955BEBA2CFA49B3D23A /* Pods-HereSDKUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HereSDKUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HereSDKUITests/Pods-HereSDKUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -148,7 +148,7 @@
 		C767E82720B83DA500535CED /* HereSDKUITests */ = {
 			isa = PBXGroup;
 			children = (
-				C767E82820B83DA500535CED /* HereSDKUITests.swift */,
+				C7E0D39420B87924007B147F /* HereSDKUITests.swift */,
 				C767E82A20B83DA600535CED /* Info.plist */,
 			);
 			path = HereSDKUITests;
@@ -206,6 +206,7 @@
 				C767E81520B83DA500535CED /* Sources */,
 				C767E81620B83DA500535CED /* Frameworks */,
 				C767E81720B83DA500535CED /* Resources */,
+				A2DDF056E46FBF7FB457AB8D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -225,6 +226,7 @@
 				C767E82020B83DA500535CED /* Sources */,
 				C767E82120B83DA500535CED /* Frameworks */,
 				C767E82220B83DA500535CED /* Resources */,
+				607C95B8E4CD6CD36CC39429 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -307,6 +309,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		607C95B8E4CD6CD36CC39429 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HereSDKUITests/Pods-HereSDKUITests-frameworks.sh",
+				"${PODS_ROOT}/HEREMapsStarter/framework/NMAKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NMAKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HereSDKUITests/Pods-HereSDKUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6CFF8FE3B4D23815534D4F13 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -323,6 +343,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2DDF056E46FBF7FB457AB8D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HereSDKTests/Pods-HereSDKTests-frameworks.sh",
+				"${PODS_ROOT}/HEREMapsStarter/framework/NMAKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NMAKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HereSDKTests/Pods-HereSDKTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D5B5ECD1868D10AB15C5E3EE /* [CP] Embed Pods Frameworks */ = {
@@ -404,7 +442,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C767E82920B83DA500535CED /* HereSDKUITests.swift in Sources */,
+				C7E0D39520B87925007B147F /* HereSDKUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,10 +603,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S43QK8TJ2U;
 				INFOPLIST_FILE = HereSDK/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rdevign.HereSDK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -584,10 +619,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S43QK8TJ2U;
 				INFOPLIST_FILE = HereSDK/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rdevign.HereSDK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -604,11 +636,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S43QK8TJ2U;
 				INFOPLIST_FILE = HereSDKTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rdevign.HereSDKTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -626,11 +654,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S43QK8TJ2U;
 				INFOPLIST_FILE = HereSDKTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rdevign.HereSDKTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -647,11 +671,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S43QK8TJ2U;
 				INFOPLIST_FILE = HereSDKUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rdevign.HereSDKUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -668,11 +688,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S43QK8TJ2U;
 				INFOPLIST_FILE = HereSDKUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rdevign.HereSDKUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

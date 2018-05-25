@@ -10,11 +10,13 @@ target 'HereSDK' do
   target 'HereSDKTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'HEREMapsStarter', '>= 3.7'
   end
 
   target 'HereSDKUITests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'HEREMapsStarter', '>= 3.7'
   end
 
 end

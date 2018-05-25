@@ -19,21 +19,91 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JtM-39-CCJ" customClass="NMAMapView">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="593"/>
                                 <color key="backgroundColor" red="0.81632529145077726" green="0.81632529145077726" blue="0.81632529145077726" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="mapView">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="normal" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n8k-TC-ONE">
+                                <rect key="frame" x="16" y="617" width="50" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="normal" label="normal"/>
+                                <state key="normal" title="Normal">
+                                    <color key="titleColor" red="1" green="0.0035778036091977938" blue="0.40243001517361121" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeSchemeAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l0z-w1-On5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="hybrid" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wus-Gc-V9k">
+                                <rect key="frame" x="91" y="617" width="46" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="hybrid" label="hybrid"/>
+                                <state key="normal" title="Hybrid">
+                                    <color key="titleColor" red="1" green="0.0035778036091977938" blue="0.40243001517361121" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeSchemeAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Tb-Wb-s68"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="reduced" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bBU-u9-KW5">
+                                <rect key="frame" x="162" y="617" width="61" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="reduced" label="reduced"/>
+                                <state key="normal" title="Reduced">
+                                    <color key="titleColor" red="1" green="0.0035778036091977938" blue="0.40243001517361121" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeSchemeAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rhv-Jr-GPz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="satellite" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hFe-b2-P5A">
+                                <rect key="frame" x="246" y="617" width="55" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="satellite" label="satellite"/>
+                                <state key="normal" title="Satellite">
+                                    <color key="titleColor" red="1" green="0.0035778036091977938" blue="0.40243001517361121" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeSchemeAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m9m-Iq-aId"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="night" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qkf-M4-avC">
+                                <rect key="frame" x="324" y="617" width="38" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="night" label="night"/>
+                                <state key="normal" title="Night">
+                                    <color key="titleColor" red="1" green="0.0035778036091977938" blue="0.40243001517361121" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeSchemeAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vpx-1u-Ham"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="qkf-M4-avC" firstAttribute="leading" secondItem="hFe-b2-P5A" secondAttribute="trailing" constant="23" id="1vi-4R-4HS"/>
+                            <constraint firstItem="hFe-b2-P5A" firstAttribute="centerY" secondItem="qkf-M4-avC" secondAttribute="centerY" id="3yp-IE-oDO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qkf-M4-avC" secondAttribute="trailing" constant="13" id="4I6-uy-J8L"/>
                             <constraint firstItem="JtM-39-CCJ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Huc-Gl-8yk"/>
                             <constraint firstItem="JtM-39-CCJ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="LEm-DO-N32"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="n8k-TC-ONE" secondAttribute="bottom" constant="20" id="P8S-YW-nZH"/>
+                            <constraint firstItem="n8k-TC-ONE" firstAttribute="centerY" secondItem="wus-Gc-V9k" secondAttribute="centerY" id="RiG-aT-Eyj"/>
+                            <constraint firstItem="hFe-b2-P5A" firstAttribute="leading" secondItem="bBU-u9-KW5" secondAttribute="trailing" constant="23" id="Wf3-ab-vJI"/>
+                            <constraint firstItem="bBU-u9-KW5" firstAttribute="leading" secondItem="wus-Gc-V9k" secondAttribute="trailing" constant="25" id="YGg-JN-nZt"/>
                             <constraint firstItem="JtM-39-CCJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Zd5-uc-SKV"/>
-                            <constraint firstItem="JtM-39-CCJ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="khS-6F-aSl"/>
+                            <constraint firstItem="n8k-TC-ONE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="hnt-Ts-lFb"/>
+                            <constraint firstItem="JtM-39-CCJ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-74" id="khS-6F-aSl"/>
+                            <constraint firstItem="wus-Gc-V9k" firstAttribute="centerY" secondItem="bBU-u9-KW5" secondAttribute="centerY" id="ktU-rT-2zr"/>
+                            <constraint firstItem="n8k-TC-ONE" firstAttribute="top" secondItem="JtM-39-CCJ" secondAttribute="bottom" constant="24" id="qU2-5e-PHi"/>
+                            <constraint firstItem="wus-Gc-V9k" firstAttribute="leading" secondItem="n8k-TC-ONE" secondAttribute="trailing" constant="25" id="rkS-Ui-slm"/>
+                            <constraint firstItem="bBU-u9-KW5" firstAttribute="centerY" secondItem="hFe-b2-P5A" secondAttribute="centerY" id="szb-Yq-6hK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="hybridButton" destination="wus-Gc-V9k" id="cuB-HJ-6BL"/>
                         <outlet property="mapView" destination="JtM-39-CCJ" id="IgF-nf-9Ja"/>
+                        <outlet property="nightButton" destination="qkf-M4-avC" id="R2s-L7-UGq"/>
+                        <outlet property="normalButton" destination="n8k-TC-ONE" id="ZIE-lh-Zku"/>
+                        <outlet property="reducedButton" destination="bBU-u9-KW5" id="pnC-x5-ave"/>
+                        <outlet property="satelliteButton" destination="hFe-b2-P5A" id="stK-yZ-vUT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
