@@ -17,10 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-//        if CommandLine.arguments.contains("--uitesting") {
-//            resetState()
-//        }
-        
         //For setup you need to have this both
         let appId = "DOlmI4SAqr6JI4peF5BR"
         let appCode = "REnAOx_WLAo-kn0wURg1sg"
@@ -28,11 +24,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NMAApplicationContext.set(appId: appId, appCode: appCode)
         
         return true
-    }
-
-    func resetState() {
-        let defaultsName = Bundle.main.bundleIdentifier!
-        UserDefaults.standard.removePersistentDomain(forName: defaultsName)
     }
     
     func applicationWillResignActive(_ application: UIApplication) {
